@@ -1,0 +1,25 @@
+<resources>
+
+    <string name="student_name_value">Student Name: %1$s</string>
+    <string name="student_dob_value">Date Of Birth: %1$s</string>
+    <string name="student_roll_value">Roll: %1$s</string>
+    <string name="student_class_value">Class: %1$s</string>
+    <string name="student_section_value">Section: %1$s</string>
+    <string name="student_address_value">Address: %1$s</string>
+
+    <string name="father_name_value">Father Name: %1$s</string>
+    <string name="mother_name_value">Mother Name: %1$s</string>
+    <string name="guardian_name_value">Guardian Name: %1$s</string>
+
+    <string name="app_name">School ERP Student</string>
+    <string name="student_name_empty">Student Name: </string>
+    <string name="student_dob_empty">Date Of Birth: </string>
+    <string name="student_roll_empty">Roll: </string>
+    <string name="student_class_empty">Class: </string>
+    <string name="student_section_empty">Section: </string>
+    <string name="student_address_empty">Address: </string>
+    <string name="father_name_empty">Father Name: </string>
+    <string name="mother_name_empty">Mother Name: </string>
+    <string name="guardian_name_empty">Guardian Name: </string>
+
+</resources>

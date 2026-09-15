@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.DownloadStudentActivity">
+
+    <!-- Top App Bar -->
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:navigationIconTint="?attr/colorOnSurface">
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Download Student Details"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- Divider -->
+
+    <View
+        android:id="@+id/topDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="?attr/colorOutline"
+        app:layout_constraintTop_toBottomOf="@id/topAppBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Main Content -->
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Search Section -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Search Student"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Enter class, section, roll and year to download student details"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:textSize="14sp"/>
+
+            <!-- Class + Section -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/CustomOutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Class">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etClass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/CustomOutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Section">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapCharacters"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- Roll + Year + Search -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/CustomOutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Roll">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRoll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/CustomOutlinedBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Year">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etYear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLines="1"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:contentDescription="Search Student"
+                    app:backgroundTint="?attr/colorPrimary"
+                    app:cornerRadius="12dp"
+                    app:icon="@drawable/baseline_search_24"
+                    app:iconTint="?attr/colorOnPrimary"/>
+
+            </LinearLayout>
+
+            <!-- Student Details Card -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/studentDetailsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Institution Banner Header Area -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/nav_header_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/tvInstitutionName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Institution Name"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tvStudentDetailsTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Student Report Card"
+                            android:textColor="#E0E0E0"
+                            android:textSize="14sp"
+                            android:textStyle="italic"/>
+
+                    </LinearLayout>
+
+                    <!-- Details Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp">
+
+                        <!-- Student Name -->
+                        <TextView
+                            android:id="@+id/tvStudentName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Student Name: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"
+                            android:textStyle="bold"/>
+
+                        <!-- Date Of Birth -->
+                        <TextView
+                            android:id="@+id/tvStudentDOB"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Date Of Birth: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <!-- Roll -->
+                        <TextView
+                            android:id="@+id/tvStudentRoll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Roll No.: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <!-- Year -->
+                        <TextView
+                            android:id="@+id/tvStudentYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Year: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <!-- Class -->
+                        <TextView
+                            android:id="@+id/tvStudentClass"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Class: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <!-- Section -->
+                        <TextView
+                            android:id="@+id/tvStudentSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Section: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <!-- Address -->
+                        <TextView
+                            android:id="@+id/tvStudentAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Address: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="?attr/colorOutline"/>
+
+                        <!-- Father Name -->
+                        <TextView
+                            android:id="@+id/tvFatherName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Father Name: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"
+                            android:textStyle="bold"/>
+
+                        <!-- Father Phone -->
+                        <TextView
+                            android:id="@+id/tvFatherPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Father Phone: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <!-- Father Occupation -->
+                        <TextView
+                            android:id="@+id/tvFatherOccupation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Father Occupation: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <!-- Father Income -->
+                        <TextView
+                            android:id="@+id/tvFatherIncome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Father Income: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="?attr/colorOutline"/>
+
+                        <!-- Mother Name -->
+                        <TextView
+                            android:id="@+id/tvMotherName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mother Name: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"
+                            android:textStyle="bold"/>
+
+                        <!-- Mother Phone -->
+                        <TextView
+                            android:id="@+id/tvMotherPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Mother Phone: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <!-- Mother Occupation -->
+                        <TextView
+                            android:id="@+id/tvMotherOccupation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Mother Occupation: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <!-- Mother Income -->
+                        <TextView
+                            android:id="@+id/tvMotherIncome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Mother Income: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="?attr/colorOutline"/>
+
+                        <!-- Guardian Name -->
+                        <TextView
+                            android:id="@+id/tvGuardianName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Guardian Name: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"
+                            android:textStyle="bold"/>
+
+                        <!-- Guardian Phone -->
+                        <TextView
+                            android:id="@+id/tvGuardianPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Guardian Phone: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                        <!-- Guardian Email -->
+                        <TextView
+                            android:id="@+id/tvGuardianEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Guardian Email: "
+                            android:textColor="?attr/colorOnSurface"
+                            android:textSize="15sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Download Button -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDownloadStudent"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:text="Download Student Details"
+                android:textColor="?attr/colorPrimary"
+                app:backgroundTint="@android:color/transparent"
+                app:cornerRadius="4dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

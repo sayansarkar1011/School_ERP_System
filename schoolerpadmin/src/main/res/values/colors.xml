@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Brand -->
+    <color name="primary">#D81B60</color>
+    <color name="primary_dark">#EC407A</color>
+
+    <color name="primaryContainer">#FFD9E5</color>
+    <color name="primaryContainerDark">#5A1030</color>
+
+    <!-- Secondary -->
+    <color name="secondary">#AD1457</color>
+    <color name="secondary_dark">#F06292</color>
+
+    <!-- Light -->
+    <color name="background_light">#FFF7FA</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="surfaceVariant_light">#F8EAF0</color>
+
+    <color name="onBackground_light">#1F1A1C</color>
+    <color name="onSurface_light">#1F1A1C</color>
+    <color name="onSurfaceVariant_light">#5C5257</color>
+
+    <!-- Dark -->
+    <color name="background_dark">#121212</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="surfaceVariant_dark">#2A2A2A</color>
+
+    <color name="onBackground_dark">#FFFFFF</color>
+    <color name="onSurface_dark">#FFFFFF</color>
+    <color name="onSurfaceVariant_dark">#D0C5CB</color>
+
+    <!-- Status -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFC107</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+
+    <!-- Common -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Drawer -->
+    <color name="drawer_bg">#FCE4EC</color>
+
+</resources>

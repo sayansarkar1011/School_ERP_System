@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "536248019604",
+    "firebase_url": "https://school-715ec-default-rtdb.firebaseio.com",
+    "project_id": "school-715ec",
+    "storage_bucket": "school-715ec.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536248019604:android:34c7f097cce342a66a2281",
+        "android_client_info": {
+          "package_name": "com.example.schoolerpadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqs7ZNTuYIb9gJmBAFn00Ggh5C61rM2Ro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536248019604:android:37b970668c9545d66a2281",
+        "android_client_info": {
+          "package_name": "com.example.schoolerpstudent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqs7ZNTuYIb9gJmBAFn00Ggh5C61rM2Ro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536248019604:android:7577d5a8a4868f4d6a2281",
+        "android_client_info": {
+          "package_name": "com.example.schoolerpteacher"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqs7ZNTuYIb9gJmBAFn00Ggh5C61rM2Ro"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
