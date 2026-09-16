@@ -100,7 +100,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="6dp"
-                            android:text="Your Dashboard"
+                            android:text="Student Dashboard"
                             android:textColor="@color/white"
                             android:textSize="24sp"
                             android:textStyle="bold"
@@ -130,7 +130,7 @@
                         android:layout_width="72dp"
                         android:layout_height="72dp"
                         android:layout_marginStart="16dp"
-                        android:src="@drawable/admin"
+                        android:src="@drawable/student"
                         android:alpha="0.85"
                         android:contentDescription="Student Icon"
                         app:tint="@color/white" />
@@ -270,7 +270,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/admin"
+                        android:src="@drawable/student"
                         app:tint="?attr/colorPrimary" />
 
                     <LinearLayout
@@ -438,7 +438,7 @@
                         style="@style/Widget.Material3.Button.TextButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Verify"
+                        android:text="Check"
                         android:textColor="?attr/colorPrimary"
                         android:textStyle="bold" />
 
@@ -475,7 +475,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/outline_cloud_download_24"
+                        android:src="@drawable/result"
                         app:tint="?attr/colorPrimary" />
 
                     <LinearLayout
@@ -507,7 +507,7 @@
                         style="@style/Widget.Material3.Button.TextButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Result"
+                        android:text="Check"
                         android:textColor="?attr/colorPrimary"
                         android:textStyle="bold" />
 
